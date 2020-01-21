@@ -1,0 +1,72 @@
+
+<head>
+  <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+
+
+
+<!doctype html>
+<html>
+<style>
+#main{ width:400px auto; height:200px auto; margin:0px; }
+
+
+</style>
+<script>
+function loginFunction(){
+document.forms['welcome'].action = 'login.php';
+document.forms['welcome'].submit();
+}
+
+function registerFunction(){
+document.forms['welcome'].action = 'register.php';
+document.forms['welcome'].submit();
+}
+
+</script>
+<body>
+
+
+<div id="main">
+<header class="head-form">
+      <h2>Log In</h2>
+      <p>login here using your username and password</p>
+   </header>
+   <br>
+<form name='welcome' method = "post">
+
+      <!--   user name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   user name Input-->
+         <input class="form-input" id="input" type="text" placeholder="Enter UserName" name="username">
+     
+      <br>
+     
+           <!--   Password -->
+     
+      <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+      <!--   Password Input-->
+      <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password">
+     
+<!--      Show/hide password  -->
+     <span>
+        <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+     </span>
+     <br>
+     <button onClick='loginFunction();' class="log-in" type = "submit" value = "Submit" name = "register"> Log In </button>
+         <button onClick='registerFunction();'class="log-in" type = "submit" value = "Register" name = "register"> Register </button>
+        </form>
+
+</table>
+
+
+
+
+</div>
+
+</body>
+</html>
